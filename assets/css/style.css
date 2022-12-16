@@ -1,0 +1,77 @@
+/* NAVBAR CONTAINER */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(12, 130, 151);
+    font-family: Arial;
+  }
+  
+  /* LINKS INSIDE NAVBAR */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ 
+  .logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+  /* DROPDOWN CONTAINER */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* DROP DOWN BUTTON */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* ADDS A BACKGROUND COLOR TO NAVBAR LINKS ON HOVER */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(86, 213, 245);
+  }
+  
+  /* DROPDOWN CONTENT (HIDDEN BY DEFAULT)*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* LINKS INSIDE DROPDOWN */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /*ADD A GREY BACKGROUD COLOR TO DROPDOWN LINKS ON HOVER*/
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+ 
+  /*SHOWS THE DROPDOWN MENU ON HOVER*/
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
