@@ -1,3 +1,4 @@
+
 //make a fetch for music match api
 //make a fetch for ticketmaster api
 //
@@ -19,3 +20,8 @@ let music = {
 			});
 	},
 };
+$('.search-button').click(function(){
+  $(this).parent().toggleClass('open');
+});
+
+
