@@ -6,7 +6,116 @@ body {
   background: #2A2E37;
 }
 
-/* Base styling */
+
+
+/* NAVBAR CONTAINER */
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #10aa95;
+  font-family: 'Raleway';
+}
+
+/* LINKS INSIDE NAVBAR */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.logo-image{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+}
+
+/* DROPDOWN CONTAINER */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* DROP DOWN BUTTON */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* ADDS A BACKGROUND COLOR TO NAVBAR LINKS ON HOVER */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #10aa95;
+}
+
+/* DROPDOWN CONTENT (HIDDEN BY DEFAULT)*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* LINKS INSIDE DROPDOWN */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/*ADD A GREY BACKGROUD COLOR TO DROPDOWN LINKS ON HOVER*/
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/*SHOWS THE DROPDOWN MENU ON HOVER*/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1;
+  font-family: 'Raleway';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+input, select, option, optgroup, textarea, button,
+pre, code {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+
+/* Search Bar Styling */
 
 h1 {
   width: fit-content;
@@ -32,7 +141,7 @@ h1 {
   width: 3px;
   height: 100%;
   position: relative;
-  background-color: #00FEDE;
+  background-color: #10aa95;
   transition: all 0.5s ease;
 }
 .search.open {
@@ -73,7 +182,7 @@ h1 {
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  border: 3px solid #00FEDE;
+  border: 3px solid #10aa95;
   display: block;
   position: relative;
   margin-left: 5px;
@@ -87,7 +196,7 @@ h1 {
   right: -2px;
   top: 30px;
   display: block;
-  background-color: #00FEDE;
+  background-color: #10aa95;
   transform: rotate(-45deg);
   transition: all 0.5s ease;
 }
@@ -99,7 +208,7 @@ h1 {
   right: -12px;
   top: 40px;
   display: block;
-  background-color: #00FEDE;
+  background-color: #10aa95;
   transform: rotate(-45deg);
   transition: all 0.5s ease;
 }
@@ -182,7 +291,7 @@ section{
   position:relative;
   top:0;
   left:0;
-	background: #00FEDE;
+	background: #10aa95;
 }
 .footer #cont{
   position:relative;
