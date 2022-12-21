@@ -12,41 +12,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <link rel="stylesheet" href="assets/css/reset.css">   
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/Users/courtneygochenour/bootcamp/ear-worm-lyrics/assets/reset.css">   
+    <link rel="stylesheet" href="/Users/courtneygochenour/bootcamp/ear-worm-lyrics/assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 
 <body>
-<!-- Search: partial:index.partial.html -->
+<!-- Search bar -->
 <h1>EARWORM</h1>
 <div class="search">
   <input type="search" class="search-box" />
   <span class="search-button">
     <span class="search-icon"></span>
   </span>
+
 </div>
-<!-- partial -->
+<script src="scripts.js"></script>
+
+<script>
+  document.getElementById("myInput").addEventListener("search", myFunction);
+</script>
+<script>
+  function save(){
+    var newData = document.getElementById('input').value;
+    if(localStorage.getItem('data')== null){
+      localStorage.setItem('data', '[]')
+    }
+    var oldData = JSON.parse(localStorage.getItem('data'));
+    oldData.push(newData);
+
+    localStorage.setItem('data', JSON.stringify(oldData));
+  }
+</script>
 
 <!-- NAVBAR LOGO -->
 <div class="navbar">
   <a class="navbar-brand" href="https://www.google.com/">
       <div class="logo-image">
-            <img src="./assets/images/placeholder.png" class="img-fluid">
+            <img src="/Users/courtneygochenour/bootcamp/ear-worm-lyrics/assets/images/placeholder.png" class="img-fluid">
       </div>
 </a>
 <!-- NAVBAR -->              
   <a href="#home">Home</a>
- <!-- <div class="dropdown">
-    <button class="dropbtn">Recents
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#"></a>
-      <a href="#"></a>
-      <a href="#"></a>
-    </div>
-  </div>-->
 </div>
 
 <!--Footer-->
