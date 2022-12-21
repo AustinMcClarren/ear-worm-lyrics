@@ -1,96 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earworm Lyrics</title>
-</head>
-<body>
 
-    <article>
-        <div class="content">
-          <label for="Lyric">Lyric</label>
-          <input
-            type="text"
-            class="input_user Lyric"
-            id="lyric"
-            placeholder="Ex: Catchy Lyric"
-         />
-  
-          <button
-            type="button"
-            class="input_user btn"
-            id="search"
-            onclick="doSubmit()"
-          >
-            Search
-          </button>
-          
-        </div>
-      </article>
-      <main>
-        <div class="lyric">
-          <div class="title_music"></div>
-          <div class="response"></div>
-        </div>
-      </main>
+    <title>Ticket finder</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-      <style>#div5 { height: 500px; width:29%; overflow-y: auto; border: 4px solid rgb(72, 3, 156); padding: 5px; margin-left: 70%;}</style>
-      <div id="div5">
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-        <div id="div6">This is a scrollable div</div>
-
-  
-      </div>
-  
-</body>
-<footer>
-
-
-</footer>
+    <!-- Animate CSS -->
     
+
+
+    <link rel="stylesheet" href="./ticketmaster.assets/ticketmaster.css">
+</head>
+
+<body>
+    <header class="navbar navbar-light bg-light justify-content-center">
+        <a class="jua">FIND TICKETS!</a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="search-bar">
+                <form>
+                    <div class="form-row">
+                </form>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" id="events">
+                        <div id="eventPlaceHolder">
+                            <h1>Please choose lyrics, a song, or artists name to find tickets.</h5>
+                        </div>
+                    </div>
+                    <div class="col-8" id="map" style="overflow:hidden;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7S0i7eNHqNekovmb6LjPjaKMd-t2XMJ0&callback=initMap"></script>
+
+    <script src="./ticketmaster.assets/ticketmaster.js"></script>
+
+</body>
+
 </html>
