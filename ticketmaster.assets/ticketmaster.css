@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    color: #f90303;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 400;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.jua {
+    font-family: 'Jua', sans-serif;
+    font-size: 110%;
+}
+
+.container, .form-row{
+    max-width: 100%;
+    padding: 0;
+    min-width: 1024px;
+}
+
+
+.search-bar {
+    padding: 0.7em;
+    background: #321e95;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+
+h1 {
+    padding-top: 50%;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
