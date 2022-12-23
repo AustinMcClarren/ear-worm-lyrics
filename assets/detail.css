@@ -1,0 +1,22 @@
+.card .front {
+	padding: 20px;
+	width: 700px;
+	height: 320px;
+	background: linear-gradient(#10AA95, #fff);
+	box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+	overflow: hidden;
+	padding: 0;
+  
+}
+
+
+body {
+	background: #2A2E37;
+  display: flex;
+  align-items: center;
+	justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Roboto:wght@100&display=swap');
+
