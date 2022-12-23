@@ -1,1 +1,0 @@
-/* This changes all the animations globally */
