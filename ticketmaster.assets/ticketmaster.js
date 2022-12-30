@@ -1,126 +1,153 @@
-var locationObjects = [];
-var center = { lat: 39.7392, lng: -104.9903 };
-var ticketMasterRespondObjects = [];
-var cityForCenter = "";
+$(document).ready(function () {
+    console.log("ready!");
+    var artist;
+    var artistName;
+    var artistURL;
+    var artistImage;
+    var trackerCount;
+    var upcomingEvents;
+    var goToArtist;
+    var inputArtist;
+    var eventDate;
+    var eventVenue;
+    var eventCity;
+    var eventReg;
+    var eventLongit;
+    var eventLat;
+    var ticketURL;
+    var mapBut;
+    var ticketBut;
+
+    var geolocation;
+    var map;
+
+    $(document).on("click", "#search-button", function (event) {
+        event.preventDefault();
+
+        var inputArtist = $("#search-box").val().trim();
+
+        console.log(inputArtist);
+        $("#event-amount").empty();
+        $('tbody').empty();
+
+        $('html,body').animate({
+            scrollTop: $("#event-amount").offset().top
+        }, 2000);
 
 
-function onCreation() {
-    $("document").ready(function () {
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDgBiTT1tZkPzoAwQORSah0mfdrgq5vht0",
-            authDomain: "trendroomproject.firebaseapp.com",
-            databaseURL: "https://trendroomproject.firebaseio.com",
-            projectId: "trendroomproject",
-            storageBucket: "trendroomproject.appspot.com",
-            messagingSenderId: "800339938200"
-        };
 
-        firebase.initializeApp(config);
+        searchBandsInTown(inputArtist);
+        showArtistEvents(inputArtist);
 
-        var database = firebase.database();
 
-        dropDownCat(database);
-        dropDownCity(database);
-
-        var userSelectCity, userSelectCat;
-        generateQuery()
     });
-}
+    //Function to seach BandsinTown API
 
-onCreation();
- 
-/// initialize the map
-function initMap() {
 
-    var incr = 0;
+    function searchBandsInTown(artist) {
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: center
-    });
+        var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/?app_id=codingbootcamp";
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
 
-    locationObjects.forEach(location => {
-        var latitude = location.latitude;
-        var longitude = location.longitude;
-        var eventId = "#tmEvent" + incr;
-        incr++;
 
-        var marker = new google.maps.Marker({
-            position: { lat: latitude, lng: longitude },
-            map: map,
-            draggable: true,
-            animation: google.maps.Animation.DROP,
-            ourAppId: eventId,
+           
+            var artistName = $("<h3>").text(response.name);
+            var artistURL = $("<a>").attr("href", response.url).append(artistName);
+            var artistImage = $("<img>").attr("src", response.thumb_url);
+            var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
+            var upcomingEvents = $("<h3>").text(response.upcoming_event_count + " Upcoming Events");
+            var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+
+            $("#event-amount").append(upcomingEvents, artistName);
+        
         });
+    }
 
-        marker.addListener('click', function () {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-                window.setTimeout(
-                    function () {
-                        marker.setAnimation(null);
-                    },
-                    1300
-                );
+
+    function showArtistEvents(artist) {
+
+        var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?limit=20&app_id=codingbootcamp";
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+
+    
+            var limit = response.length > 8 ? 8 : response.length;
+            for (var i = 0; i < limit; i++) {
+
+                var eventData = response[i];
+                var newDate = moment(eventDate).format('lll');
+                var ticketURL = eventData.offers[0].url;
+
+            
+
+                var eventDate = eventData.datetime
+                var eventVenue = eventData.venue.name
+                var eventCity = eventData.venue.city
+                var eventReg = eventData.venue.region;
+                var eventLat = eventData.venue.latitude;
+                var eventLng = eventData.venue.longitude;
+                var ticketURL = eventData.offers[0].url;
+                console.log("ticket url:" + eventData.offers[0].url);
+                console.log(eventLat)
+                console.log(eventLng)
+                var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + eventLat + "," + eventLng;
+
+                $('table').find('tbody').append(
+                    `<tr>
+                    <td class="dateCol">${newDate}</td>
+                    <td class="venueCol">${eventVenue}</td>
+                    <td class="locCol">${eventCity},${eventReg}</td>
+                    <td class="urlCol"><button class='ticketBut btn-dark btn-sm'>Buy<a href="${ticketURL}" target="_blank"></a></button></td>
+                    <td class ="mapButCol"><button class="mapBut btn-sm btn-dark" data-lat="${eventLat}" data-long="${eventLng}">Map It!</button>
+                </tr>`
+
+                )
+
             }
-            console.log(this.ourAppId);
-            scrollToCard(this.ourAppId);
-        });
+        })
+    }
+
+    $(document).ajaxError(function (e, jqXHR, settings, err) {
+        $("#event-amount").text("Artist Not Found");
+
+        console.log("In global error callback.");
+
     });
-};
 
-/// Returns a location object with lat and long
-
-function makeLocationObject(lat, long) {
-    return {
-        latitude: lat,
-        longitude: long
-    };
-}
+    $("body").on("click", ".mapBut", function (e) {
+        var latit = parseFloat($(this).attr("data-lat"));
+        var long = parseFloat($(this).attr("data-long"));
 
 
-function createCards() {
-    $("#events").html("");
+        console.log("lat (%d) and long (%d)", latit, long)
+        initMap(latit, long);
+        console.log("LAT LONG SHOULD CHANGE")
+    });
 
-    for (var i = 0; i < ticketMasterRespondObjects.length; i++) {
-        var ticketlink = ticketMasterRespondObjects[i].ticketPurchase;
 
-        var thehtml = `
-                 <div class="card" id="tmEvent${i}">
-                 <div class="card-header">
-                     <h6>${ticketMasterRespondObjects[i].name}</h6>
-                     <p>${ticketMasterRespondObjects[i].playingAtVenue}</p>
-                 </div>
-                 <div class="card-body">
-                     <div class="col-7">
-                         <img src="${ticketMasterRespondObjects[i].image}" width="100%">
-                     </div>
-                     <div class="col-5">
-                         <p>${ticketMasterRespondObjects[i].date}</p>
-                         <p>${ticketMasterRespondObjects[i].genre} ${ticketMasterRespondObjects[i].segment}</p>
-                         <a href="${ticketlink}" target="_blank" class="btn btn-primary btn-sm">See Ticket</a>
-                         </div>
-                 </div>
-                 </div>
-                 `
-        console.log("ticketsxxxxx :" + ticketMasterRespondObjects[i].ticketPurchase);
 
-		$("#events").append(thehtml)
-    };
-}
 
-function scrollToCard(id) {
-    var $container = $('#events'),
-        $scrollTo = $(id);
 
-    console.log("entered function");
+});
 
-    $container.scrollTop(
-        $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
-    );
+function initMap(lati, long) {
+    console.log("=====================INIT MAP FUNCTION====================")
+    let lat = lati || 33.759247;
+    let lng = long || -84.387722;
+    var pos = { lat, lng };
+    console.log(pos)
+    map = new google.maps.Map(document.getElementById('map-div'), {
+        zoom: 16,
+        center: pos
+    });
+    var marker = new google.maps.Marker({
+        position: pos,
+        map: map
+    });
 
- 
 }
