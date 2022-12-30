@@ -22,11 +22,11 @@ body {
 .navbar a {
   float: left;
   color: white;
-  text-align: center;
   font-family: 'Raleway';
   font-weight: bolder;
-  font-size: large;
-  padding: 10px 10px;
+  font-size: 25pt;
+  margin-top: 10px;
+  padding: 8px 8px 8px 8px;
   text-decoration: none;
 }
 
@@ -35,7 +35,6 @@ body {
   height: 46px;
   border-radius: 50%;
   overflow: hidden;
-  margin-top: auto;
 }
 
 /* ADDS A BACKGROUND COLOR TO NAVBAR LINKS ON HOVER */
@@ -295,10 +294,33 @@ section{
 	float:left;
   text-align:center;
 }
-.footer h3{
-	font-family: 'Raleway';
-	font-size: 30px;
-	font-weight: 100;
-	margin-top:70px;
-	margin-left:40px;
+
+
+/* Recents Styling */
+.row
+{
+  width:100%;
+  height:auto;
+  padding-top: 2%;
+  display:flex;
+  justify-content: center;
+}
+.row #col1
+{
+  width:34%;
+  text-align: center;
+  height:auto;
+}
+#col2
+{
+  width:34%;
+  text-align: center;
+  height:auto;
+  
+}
+#col3
+{
+  width:34%;
+  text-align: center;
+  height:auto;
 }
