@@ -1,42 +1,13 @@
 
-  
-  
-  
-  #search-box {
-    text-align: center;
-    width: 50%;
-    color: rgb(139, 6, 255);
-    border-bottom: 1px solid white;
-  }
-   
 
-  #search-button {
-    background: transparent;
-    border: none; 
-    color: white;
-  }
-  
-  
+.search-bar {
+    padding: 0.7em;
+    background: #321e95;
+}
 
-  #map-div {
-    height: 300px;
+#map {
+    height: 100vh;
     width: 100%;
-    background-color: grey;
-  }
-  
+}
 
 
-  
-
-  
-  #artist-table {
-   width: 100%;
-   text-align: left;
-  
-  }
-  
-  #map-div {
-    width: 80%;
-    border: 50px solid white;
-    height: 500px;
-  }
