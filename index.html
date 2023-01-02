@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>EarWorm - Song Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./assets/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<!--Nav-->
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- NAVBAR LOGO -->
+  <div class="navbar">
+    <a class="navbar-brand" href="https://github.com/AustinMcClarren/ear-worm-lyrics">
+      <div class="logo-image">
+        <img src="./assets/images/logo.png">
+      </div>
+    </a>
+    <h1>EAR WORM</h1>
+    <div>
+      <!-- <img id="imgheading" src="./assets/images/earwormtitle.gif" alt="dancing header"> -->
+    </div>
+  </div> 
+    
+
+
+<section>
+  <div class="row justify-content-center max-vw">
+    <div class="col-xs-8 col-md-4 search-box">
+      <form onsubmit="return false">
+        <div class="form-group">
+          <input type="search" name="q" id="search" placeholder="Find My Music">
+        </div>
+
+        <div class="form-group">
+          <div id="artist-btn">
+            <input type="radio" name="search" value="artist" id="artistRadioButton" checked>Artist
+          </div>
+          <div id="song-btn">
+            <input type="radio" name="search" value="song" id="songRadioButton">Song
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button class="search-btn" onclick="checkRadio()">Search</button>
+          <button class="btn btn-secondary btn-clear" onclick="resetPage()">Clear Results</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <div class="row justify-content-center max-vw">
+    <table id="back-button-container" class="table table-hover table-striped results"></table>
+  </div>
+  <div class="row justify-content-center max-vw">
+    <table id="results" class="table table-hover table-striped results">
+    </table>
+  </div>
+</section>
+
+  
+  <!--Footer-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="./assets/script.js"></script>
+  <div class="footer">
+    <div id="button"></div>
+    <div id="container">
+      <div id="cont">
+        <div class="footer_center">
+          <h3>Recents Go Here</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
