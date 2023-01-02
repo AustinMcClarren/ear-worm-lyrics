@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="full-height" lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Earworm</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  <link href="./events/events.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+
+<body id="top">
+  <header>
+   
+                  <div class="input-field">
+                    <form>
+                      <input id="search-box" type="search" required>
+                      <button id="search-button" type="submit">
+                        <i class="material-icons">search</i>
+                      </button>
+                    </form>
+    </section>
+  </header>
+
+  <div>
+    <p>
+      <h2 id="event-amount"></h2>
+    </p>
+  </div>
+  <div class="container" id="main-container">
+    <div class="row">
+      <div class="col-md-7">
+        <div id="artist-table-div" style="width: 100%">
+          <table id="artist-table" class="table">
+            <thead id="table-head">
+              <tr id="table-row"></tr>
+                <th class="table-header-item">DATE/TIME</th>
+                <th class="table-header-item">VENUE</th>
+                <th class="table-header-item">LOCATION</th>
+                <th class="table-header-item">PURCHASE TICKETS</th>
+                <th class="table-header-item">DESTINATION</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-5" id="map-div">
+      </div>
+    </div>
+
+ 
+  </footer>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL1pWue1-8N5rlNWW2anG7vEvNgHg2UNc&callback=initMap"></script>
+  <script type="text/javascript" src="./events/events.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+
+  #search-box {
+    text-align: center;
+    width: 50%;
+    color: rgb(174, 7, 245);
+    border-bottom: 1px solid white;
+  }
+
+  #search-button {
+    background: transparent;
+    border: none; 
+    color: white;
+  }
+
+  #map-div {
+    height: 300px;
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #artist-table-div {
+   margin: 10 auto 10 auto;
+   padding: 0 10px 0 20px;
+  }
+  
+  #artist-table {
+   width: 100%;
+   text-align: left;
+  
+  }
+  
+  #map-div {
+    width: 80%;
+    border: 50px solid white;
+    height: 500px;
+  }
+  
+ 
