@@ -39,7 +39,7 @@ function getTrack() {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "1d6ef56b1aae26521d0028a33b0d847b",
                 q_track: searchTerms, //queries by song name
                 format: "jsonp",
                 callback: "jsonp_callback",
@@ -102,7 +102,7 @@ function getArtist() {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "1d6ef56b1aae26521d0028a33b0d847b",
                 q_artist: searchTerms, //queries by artist name
                 format: "jsonp",
                 callback: "jsonp_callback",
@@ -164,7 +164,7 @@ function getAlbumList(artistID) {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "1d6ef56b1aae26521d0028a33b0d847b",
                 artist_id: artistID, //unique ID of the specified artist
                 format: "jsonp",
                 callback: "jsonp_callback",
@@ -227,7 +227,7 @@ function getTrackList(albumID) {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "1d6ef56b1aae26521d0028a33b0d847b",
                 album_id: albumID, //unique ID of the specified album
                 format: "jsonp",
                 callback: "jsonp_callback",
@@ -296,7 +296,7 @@ function returnLyrics(trackID, goBack) {
     $.ajax({
         type: "GET",
         data: {
-            apikey: "16099f064260947071709a4bc6421891",
+            apikey: "1d6ef56b1aae26521d0028a33b0d847b",
             track_id: trackID, //unique ID of the song
             format: "jsonp",
             callback: "jsonp_callback",
@@ -313,7 +313,7 @@ function returnLyrics(trackID, goBack) {
             $.ajax({
                 type: "GET",
                 data: {
-                    apikey: "16099f064260947071709a4bc6421891",
+                    apikey: "1d6ef56b1aae26521d0028a33b0d847b",
                     track_id: trackID, //unique ID of the song
                     format: "jsonp",
                     callback: "jsonp_callback",

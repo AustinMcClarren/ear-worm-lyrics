@@ -120,7 +120,11 @@ ol, ul {
 
 /* Search Bar Styling */
 
-h1 {
+
+
+
+
+/* h1 {
   width: fit-content;
   margin: 40px auto;
   position: relative;
@@ -232,7 +236,7 @@ h1 {
   right: 22px;
   top: 13px;
   height: 18px;
-}
+} */
 
 /* footer styling */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
