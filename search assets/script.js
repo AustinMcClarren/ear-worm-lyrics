@@ -1,13 +1,3 @@
-// //search button toggle
-// const input = document.getElementById("search-input");
-// const searchBtn = document.getElementById("search-btn");
-
-// const expand = () => {
-//   searchBtn.classList.toggle("close");
-//   input.classList.toggle("square");
-// };
-
-// searchBtn.addEventListener("click", expand);
 
 var searchTerms; //The value entered into the search box.
 var trackID; //The ID created in the getTrack function for use in the returnLyrics function. 
@@ -39,11 +29,11 @@ function getTrack() {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "ee399e8e7a0c379552ad8b0f830e7c26",
                 q_track: searchTerms, //queries by song name
                 format: "jsonp",
                 callback: "jsonp_callback",
-                page_size: 100, //returns the first 100 results
+                page_size: 15, //returns the first 100 results
                 s_artist_rating: "DESC", //sorts by popularity of artist
 
             },
@@ -68,7 +58,6 @@ function getTrack() {
                                                         <td>${item.track.artist_name}</td>
                                                         <td>
                                                             <button class="btn btn-secondary btn-result" onclick="returnLyrics(${item.track.track_id}, 'getTrack')">Click here for lyrics</button>
-                                                            <button class="btn btn-secondary btn-result-mobile" onclick="returnLyrics(${item.track.track_id}, 'getTrack')">Lyrics</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>`;
@@ -102,11 +91,11 @@ function getArtist() {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "ee399e8e7a0c379552ad8b0f830e7c26",
                 q_artist: searchTerms, //queries by artist name
                 format: "jsonp",
                 callback: "jsonp_callback",
-                page_size: 50, //returns the top 50 results
+                page_size: 15, //returns the top 50 results
                 s_artist_rating: "DESC", //sorted by popularity of artist
 
             },
@@ -129,7 +118,6 @@ function getArtist() {
                                                         <td>${item.artist.artist_name}</td>
                                                         <td>
                                                             <button class="btn btn-secondary btn-result" onclick="getAlbumList(${item.artist.artist_id})">Click here for a list of albums</button>
-                                                                <button class="btn btn-secondary btn-result-mobile" onclick="getAlbumList(${item.artist.artist_id})">Albums</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>`;
@@ -164,11 +152,11 @@ function getAlbumList(artistID) {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "ee399e8e7a0c379552ad8b0f830e7c26",
                 artist_id: artistID, //unique ID of the specified artist
                 format: "jsonp",
                 callback: "jsonp_callback",
-                page_size: 100, //returns the top 100 results
+                page_size: 15, //returns the top 100 results
                 g_album_name: 1 //groups albums of the same name into one result
 
             },
@@ -191,7 +179,6 @@ function getAlbumList(artistID) {
                                                         <td>${item.album.album_name}</td>
                                                         <td>
                                                             <button class="btn btn-secondary btn-result" onclick="getTrackList(${item.album.album_id})">Click here for a list of tracks</button>
-                                                            <button class="btn btn-secondary btn-result-mobile" onclick="getTrackList(${item.album.album_id})">Tracks</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>`;
@@ -227,11 +214,11 @@ function getTrackList(albumID) {
     $.ajax({
             type: "GET",
             data: {
-                apikey: "16099f064260947071709a4bc6421891",
+                apikey: "ee399e8e7a0c379552ad8b0f830e7c26",
                 album_id: albumID, //unique ID of the specified album
                 format: "jsonp",
                 callback: "jsonp_callback",
-                page_size: 50, //returns the top 50 results
+                page_size: 15, //returns the top 50 results
 
             },
             url: "https://api.musixmatch.com/ws/1.1/album.tracks.get",
@@ -253,7 +240,6 @@ function getTrackList(albumID) {
                                                         <td>${item.track.track_name}</td>
                                                         <td>
                                                             <button class="btn btn-secondary btn-result" onclick="returnLyrics(${item.track.track_id}, 'getTrackList')">Click here for lyrics</button>
-                                                            <button class="btn btn-secondary btn-result-mobile" onclick="returnLyrics(${item.track.track_id}, 'getTrackList')">Lyrics</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>`;
@@ -296,7 +282,7 @@ function returnLyrics(trackID, goBack) {
     $.ajax({
         type: "GET",
         data: {
-            apikey: "16099f064260947071709a4bc6421891",
+            apikey: "ee399e8e7a0c379552ad8b0f830e7c26",
             track_id: trackID, //unique ID of the song
             format: "jsonp",
             callback: "jsonp_callback",
@@ -313,7 +299,7 @@ function returnLyrics(trackID, goBack) {
             $.ajax({
                 type: "GET",
                 data: {
-                    apikey: "16099f064260947071709a4bc6421891",
+                    apikey: "ee399e8e7a0c379552ad8b0f830e7c26",
                     track_id: trackID, //unique ID of the song
                     format: "jsonp",
                     callback: "jsonp_callback",

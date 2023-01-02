@@ -3,13 +3,11 @@
 }
 
 body {
-  background: black;
-  background-image: url("./images/earworm.png");
+  background: rgb(48, 48, 48);
+  background-image: url("./images/background.png");
   background-position: bottom;
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-repeat: no-repeat;
 }
-
-
 
 /* NAVBAR CONTAINER */
 .navbar {
@@ -38,60 +36,9 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin-top: -6px;
+  margin-left: auto;
 }
 
-/* DROPDOWN CONTAINER */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* DROP DOWN BUTTON */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* ADDS A BACKGROUND COLOR TO NAVBAR LINKS ON HOVER */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #10aa95;
-}
-
-/* DROPDOWN CONTENT (HIDDEN BY DEFAULT)*/
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* LINKS INSIDE DROPDOWN */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/*ADD A GREY BACKGROUD COLOR TO DROPDOWN LINKS ON HOVER*/
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/*SHOWS THE DROPDOWN MENU ON HOVER*/
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 html {
   height: 100%;
@@ -112,127 +59,78 @@ pre, code {
   font-size: 100%;
   font-family: inherit;
 }
-
+s
 ol, ul {
   list-style: none;
 }
 
 
-/* Search Bar Styling */
-
-h1 {
-  width: fit-content;
-  margin: 40px auto;
-  position: relative;
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  font-size: medium;
-}
-
-.search {
-  width: 100px;
-  height: 100px;
-  margin: 40px auto 0;
-  background-color: #242628;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-.search:before {
-  content: '';
-  display: block;
-  width: 3px;
-  height: 100%;
-  position: relative;
-  background-color: #10aa95;
-  transition: all 0.5s ease;
-}
-.search.open {
-  width: 420px;
-}
-.search.open:before {
-  height: 60px;
-  margin: 20px 0 20px 30px;
-  position: absolute;
-}
+/*Search box*/
 
 .search-box {
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  border: none;
-  background: transparent;
-  color: #fff;
-  padding: 20px 100px 20px 45px;
-  font-size: 40px;
-}
-.search-box:focus {
-  outline: none;
-}
-
-.search-button {
-  width: 100px;
-  height: 100px;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
   padding: 20px;
-  cursor: pointer;
+  text-align: center;
+  color: #D8D8F6;
+  max-width: 80vw;
+  margin-top: 300px;
+  margin-left: 180px;
+  
 }
 
-.search-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
-  border: 3px solid #10aa95;
-  display: block;
-  position: relative;
-  margin-left: 5px;
-  transition: all 0.5s ease;
+
+#search {
+  border-radius: 10px;
 }
-.search-icon:before {
-  content: '';
-  width: 3px;
-  height: 15px;
-  position: absolute;
-  right: -2px;
-  top: 30px;
-  display: block;
-  background-color: #10aa95;
-  transform: rotate(-45deg);
-  transition: all 0.5s ease;
+
+#search:focus {
+  outline: none;
+  /*needed to be removed as the outline had square corners which interferes with border radius*/
 }
-.search-icon:after {
-  content: '';
-  width: 3px;
-  height: 15px;
-  position: absolute;
-  right: -12px;
-  top: 40px;
-  display: block;
-  background-color: #10aa95;
-  transform: rotate(-45deg);
-  transition: all 0.5s ease;
+
+input {
+  margin: 10px;
 }
-.open .search-icon {
-  margin: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;
+
+/*Buttons*/
+
+.btn-result {
+  background-color: #10AA95;
+  border-color: #10AA95;
+  margin: 5px auto 5px;
 }
-.open .search-icon:before {
-  transform: rotate(52deg);
-  right: 22px;
-  top: 23px;
-  height: 18px;
+
+
+.btn-srch {
+  background-color: #3f3f3f;
+  border-color: #3f3f3f;
+  margin: 5px auto 5px;
 }
-.open .search-icon:after {
-  transform: rotate(-230deg);
-  right: 22px;
-  top: 13px;
-  height: 18px;
+
+.btn-srch {
+  width: 125px;
+  background-color: transparent;
 }
+
+.btn-clear {
+  border-color: #3f3f3f;
+  background-color: transparent;
+}
+
+.results {
+
+  color: #10AA95;
+}
+
+.btn-srch:hover,
+.btn-result:hover,
+.btn-clear:hover {
+  background-color: #10AA95;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
 
 /* footer styling */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);

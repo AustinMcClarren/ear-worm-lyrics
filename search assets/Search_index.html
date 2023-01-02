@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>EarWorm - Song Finder</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <!--Nav-->
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <link rel="stylesheet" href="/assets/reset.css">
-    <link rel="stylesheet" href="/assets/style.css">   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  
 </head>
 
 <body>
 <!-- Search: partial:index.partial.html -->
 <h1>EARWORM</h1>
-<div class="search">
+<!-- <div class="search">
   <input type="search" class="search-box" />
   <span class="search-button">
     <span class="search-icon"></span>
   </span>
-</div>
+</div> -->
 
 <section>
   <div class="row justify-content-center max-vw">
       <div class="col-xs-8 col-md-4 search-box">
           <form onsubmit="return false">
               <div class="form-group">
-                  <input type="search" name="q" id="search" placeholder="Enter search terms here">
+                  <input type="search" name="q" id="search" placeholder="Enter Artist or Song Lyrics">
               </div>
               <div class="form-group">
                   <input type="radio" name="search" value="artist" id="artistRadioButton" checked>Artist
@@ -62,7 +62,7 @@
   <!-- WHEN DEPLOYED UPDATE WITH GITPAGES LINK -->
   <a class="navbar-brand" href="https://www.google.com/">
       <div class="logo-image">
-            <img src="./images/" class="img-fluid">
+            <img src="./images/earworm.png" class="img-fluid">
       </div>
 </a>
 
@@ -84,8 +84,8 @@
 </div> -->
 
 <!--Footer-->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='/assets/script.js'></script><script  src="./script.js"></script>
+
+  <script  src="./script.js"></script>
   <div class="footer">
     <div id="button"></div>
   <div id="container">
