@@ -122,6 +122,7 @@ $(document).ready(function () {
     $("body").on("click", ".mapBut", function (e) {
         var latit = parseFloat($(this).attr("data-lat"));
         var long = parseFloat($(this).attr("data-long"));
+        var ticketURL = eventData.offers[0].url;
 
 
         console.log("lat (%d) and long (%d)", latit, long)

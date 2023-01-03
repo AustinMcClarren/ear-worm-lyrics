@@ -30,7 +30,7 @@ function getTrack() {
 			q_track: searchTerms, //queries by song name
 			format: "jsonp",
 			callback: "jsonp_callback",
-			page_size: 100, //returns the first 100 results
+			page_size: 15, //returns the first 15 results
 			s_artist_rating: "DESC", //sorts by popularity of artist
 		},
 
@@ -86,7 +86,7 @@ function getArtist() {
 			q_artist: searchTerms, //queries by artist name
 			format: "jsonp",
 			callback: "jsonp_callback",
-			page_size: 50, //returns the top 50 results
+			page_size: 15, //returns the top 15 results
 			s_artist_rating: "DESC", //sorted by popularity of artist
 		},
 
@@ -108,7 +108,6 @@ function getArtist() {
                                                         <td>${item.artist.artist_name}</td>
                                                         <td>
                                                             <button class="btn btn-secondary btn-result" onclick="getAlbumList(${item.artist.artist_id})">Click here for a list of albums</button>
-                                                                <button class="btn btn-secondary btn-result-mobile" onclick="getAlbumList(${item.artist.artist_id})">Albums</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>`;
@@ -141,7 +140,7 @@ function getAlbumList(artistID) {
 			artist_id: artistID, //unique ID of the specified artist
 			format: "jsonp",
 			callback: "jsonp_callback",
-			page_size: 100, //returns the top 100 results
+			page_size: 15, //returns the top 15 results
 			g_album_name: 1, //groups albums of the same name into one result
 		},
 		url: "https://api.musixmatch.com/ws/1.1/artist.albums.get",
@@ -163,7 +162,6 @@ function getAlbumList(artistID) {
                                                         <td>${item.album.album_name}</td>
                                                         <td>
                                                             <button class="btn btn-secondary btn-result" onclick="getTrackList(${item.album.album_id})">Tracks List!</button>
-                                                            <button class="btn btn-secondary btn-result-mobile" onclick="getTrackList(${item.album.album_id})">Tracks!</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>`;
@@ -196,7 +194,7 @@ function getTrackList(albumID) {
 			album_id: albumID, //unique ID of the specified album
 			format: "jsonp",
 			callback: "jsonp_callback",
-			page_size: 50, //returns the top 50 results
+			page_size: 15, //returns the top 15 results
 		},
 		url: "https://api.musixmatch.com/ws/1.1/album.tracks.get",
 		dataType: "jsonp",
@@ -220,7 +218,6 @@ function getTrackList(albumID) {
                                                         <td>${item.track.track_name}</td>
                                                         <td>
                                                             <button class=" back-btn btn btn-secondary btn-result" onclick="returnLyrics(${item.track.track_id}, 'getTrackList')">Click here for lyrics</button>
-                                                            <button class="back-btn btn btn-secondary" onclick="returnLyrics(${item.track.track_id}, 'getTrackList')">Lyrics</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>`;
