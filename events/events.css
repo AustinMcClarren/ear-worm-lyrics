@@ -22,9 +22,7 @@ background: rgb(240, 155, 155);
   }
 
   #map-div {
-    height: 300px;
-    width: 100%;
-    text-align: center;
+    height: 200px;
   }
   
   #artist-table-div {
