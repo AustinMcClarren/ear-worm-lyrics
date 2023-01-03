@@ -1,5 +1,6 @@
 $(document).ready(function () {
     console.log("ready!");
+    //defines my variables
     var artist;
     var artistName;
     var artistURL;
@@ -21,29 +22,25 @@ $(document).ready(function () {
     var geolocation;
     var map;
 
+    //event handler for search 
     $(document).on("click", "#search-button", function (event) {
         event.preventDefault();
-
+        //stores artist name
         var inputArtist = $("#search-box").val().trim();
 
         console.log(inputArtist);
         $("#event-amount").empty();
         $('tbody').empty();
 
-        $('html,body').animate({
-            scrollTop: $("#event-amount").offset().top
-        }, 2000);
-
-
-
+    
+        // Running the searchBandsInTown function
         searchBandsInTown(inputArtist);
         showArtistEvents(inputArtist);
 
 
     });
+
     //Function to seach BandsinTown API
-
-
     function searchBandsInTown(artist) {
 
         var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/?app_id=codingbootcamp";
@@ -52,6 +49,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
 
+            // Printing the entire object to console
 
            
             var artistName = $("<h3>").text(response.name);
@@ -68,7 +66,8 @@ $(document).ready(function () {
 
 
     function showArtistEvents(artist) {
-
+        // Querying the bandsintown api for the selected artist
+        //?app_id parameter is required, but can equal anything
         var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?limit=20&app_id=codingbootcamp";
         $.ajax({
             url: queryURL,
@@ -111,14 +110,14 @@ $(document).ready(function () {
             }
         })
     }
-
+//shows error if not found
     $(document).ajaxError(function (e, jqXHR, settings, err) {
         $("#event-amount").text("Artist Not Found");
 
         console.log("In global error callback.");
 
     });
-
+//changes map destination
     $("body").on("click", ".mapBut", function (e) {
         var latit = parseFloat($(this).attr("data-lat"));
         var long = parseFloat($(this).attr("data-long"));
