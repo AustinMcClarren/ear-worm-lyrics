@@ -1,6 +1,33 @@
 # ear-worm-lyrics
 Find lyrics through a web application using multiple server API's &amp; to find the song that you can't figure out.
 
+
+## User Story
+
+    As A user
+    I want the ability to search songs or artists and find upcoming events
+    So that I can find lyrics and be able to purchase tickets for upcoming shows
+
+
+
+
+## Acceptance Criteria
+
+
+
+
+
+
+
+## Link
+Link to Deployed GitPages Site
+
+
+
+## Screenshot
+
+
+
 MIT License
 
 Copyright (c) 2022 Austin Mcclarren
