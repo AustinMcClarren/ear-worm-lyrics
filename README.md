@@ -1,36 +1,80 @@
-# ear-worm-lyrics
-Find lyrics through a web application using multiple server API's &amp; to find the song that you can't figure out.
-
-
-## User Story
-
-    As A user
-    I want the ability to search songs or artists and find upcoming events
-    So that I can find lyrics and be able to purchase tickets for upcoming shows
+### EAR WORM
+Welcome to Ear Worm, the ultimate app for finding the lyrics to your favorite songs! With Lyric Finder, you can easily search for lyrics to any song, and even the album for that song.
 
 
 
-
-## Acceptance Criteria
-
-
+## How To Use
+To search for song or artist, simply enter the song or artist into the search bar and hit "Search". You will then be taken to a page with the top 50 results for that artist or song. Then you can click the one you're looking for and then find the lyrics! 
 
 
 
+## Lessons Learned
+We learned alot during the process of making this project. 
+We learned about time managment. Learning to deal with different schedules. 
+We also learned about the struggles of API.
 
 
-## Link
-Link to Deployed GitPages Site
+## Acceptance criteria
+WHEN I launch the page , I will be presented with a page to search for either an artist or song
+THEN I will be able to click on the artist/song, in order to see all the albums/tracks they are included in
+WHEN I search for a artist, by searching.
+THEN I am presented with a list of albums from the artist I have selected
+WHEN I click on a particular albums.
+THEN I am presented with a detailed view of the of the lyrics for that song.
 
 
 
-## Screenshot
+### Credits
+Project Manager = Austin McClarren 
+● Lead Designer  = Courtney Gochenour
+● Support Designer =  Frankie Sanchez
+● Lead API Engineer = Max Fell
+● Support API Engineer = Thomas Bailey
+● Testing/Support = Everyone
 
 
 
-MIT License
 
-Copyright (c) 2022 Austin Mcclarren
+### APIs Used
+GoogleAPI
+MusixMatchAPI
+BandsintownAPI
+
+
+## Additonal Resources
+-Google
+-StackOverflow
+-Classmates
+
+
+## Tech Stack
+
+**FRONTEND:** HTML, CSS, JAVASCRIPT
+
+
+
+## Documentation
+
+[MusixMatch](https://developer.musixmatch.com/documentation/api-reference/track-lyrics-get)
+[Google Maps](https://mapsplatform.google.com/maps-products/dynamic-maps/?utm_source=search&utm_medium=googleads&utm_campaign=brand_core_exa_desk_mobile_us&gclid=CjwKCAiAwc-dBhA7EiwAxPRylC0EHfED0nteKrOpo_8-ibhUmbmIC3H0CkdUp9UF3oUZWXo84bA_RhoCDQEQAvD_BwE&gclsrc=aw.ds)
+[Bands In Town](https://artists.bandsintown.com/support/api-installation)
+
+
+
+
+## Screenshots
+![App Screenshot](./assets/images/front%20page.png)
+![App Screenshot](./assets/images/lyricsforthetract.png)
+![App Screenshot](./assets/images/stuff%20with%20the%20artist.png)
+
+
+
+
+
+
+### MIT License
+
+Copyright (c) 2022 Ear Worm
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

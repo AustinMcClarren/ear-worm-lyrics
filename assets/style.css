@@ -1,3 +1,4 @@
+/* googlefonts for page */
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
 * {
@@ -5,7 +6,7 @@
   font-family: 'Rubik Bubbles', cursive;
   viewport-fit:contain;
 }
-
+/* body and button styling */
 body {
 	background: rgb(240, 155, 155);
 	background-image: url("./images/earworm.png");
@@ -25,21 +26,27 @@ body {
 
 .form-group {
 	margin: 2rem;
+	cursor: pointer;
 }
 
 #artist-btn {
 	margin-right: 2rem;
 	display: inline-block;
    font-family: 'Rubik Bubbles', cursive;
+	 cursor: pointer;
 }
 #song-btn {
 	margin-right: 2rem;
 	display: inline-block;
    font-family: 'Rubik Bubbles', cursive;
+	 cursor: pointer;
 }
 
 input {
 	margin: 0.5rem;
+	border-radius: 15%;
+	width: 20%;
+	cursor: pointer;
 }
 
 #search {
@@ -106,10 +113,12 @@ h1{
   font-size: larger;
   font-size: 4rem;
   line-height: 10%;
+	flex-wrap: wrap;
+	margin-right: 6.5rem;
 
 }
 
-/* Search Bar Styling */
+/* Search Bar Styling/buttons */
 .search {
 	height: 100px;
 	margin: 40px auto 0;
@@ -141,6 +150,7 @@ td button {
 	padding: 1rem;
 	border-radius: 15%;
   font-family: 'Rubik Bubbles', cursive;
+	cursor: pointer;
 }
 
 th{
