@@ -37,7 +37,7 @@
 
 <section>
   <div class="row justify-content-center max-vw">
-    <div class="col-xs-8 col-md-4 search-box">
+    <!--<div class="col-xs-8 col-md-4 search-box"> -->
       <form onsubmit="return false">
         <div class="form-group">
           <input type="search" name="q" id="search" placeholder="Find My Music">
@@ -54,6 +54,7 @@
 
         <div class="form-group">
           <button class="search-btn" onclick="checkRadio()">Search</button>
+          <button class="concert-btn" onclick="document.location='Events.html'">Find Concerts</button>
           <button class="btn btn-secondary btn-clear" onclick="resetPage()">Clear Results</button>
         </div>
 
@@ -63,7 +64,7 @@
   <div class="row justify-content-center max-vw">
     <table id="back-button-container" class="table table-hover table-striped results"></table>
   </div>
-  <div class="row justify-content-center max-vw">
+  <div class="row-justify-content-center">
     <table id="results" class="table table-hover table-striped results">
     </table>
   </div>
@@ -74,11 +75,12 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script  src="./assets/script.js"></script>
   <div class="footer">
-    <div id="button"></div>
+   <div id="button" href="/assets/images/logo.png">
+   </div>
     <div id="container">
       <div id="cont">
         <div class="footer_center">
-          <h3>Recents Go Here</h3>
+          <h3>Created by: Austin McClarren, Courtney Gochenour, Frankie Sanchez, Max Fell, & Thomas Jerod</h3>
         </div>
       </div>
     </div>
