@@ -1,21 +1,30 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+body{
+background: rgb(240, 155, 155);
+}
   #search-box {
     text-align: center;
-    width: 50%;
-    color: rgb(0, 0, 0)5;
-    border-bottom: 1px solid white;
+    color: #10aa95;
+    font-family: 'Rubik Bubbles', cursive;
+    font-weight: lighter;
+    border-radius: 20%;
+    width: 22rem;
+    margin-bottom: 1rem;
+
   }
 
   #search-button {
-    background: transparent;
     border: none; 
-    color: white;
+    color: rgb(240, 155, 155);
+    font-family: 'Rubik Bubbles', cursive;
+    border-radius: 20%;
+
   }
 
   #map-div {
     height: 300px;
     width: 100%;
-    background-color: grey;
+    text-align: center;
   }
   
   #artist-table-div {
@@ -34,5 +43,36 @@
     border: 50px solid white;
     height: 500px;
   }
+
+  .table-header-item{
+     font-family: 'Rubik Bubbles', cursive;
+     color: #10aa95;
+  }
   
- 
+ #event-amount{
+    font-family: 'Rubik Bubbles', cursive;
+    color: #10aa95;
+ }
+
+ .dateeventcity{
+  font-family: 'Rubik Bubbles', cursive;
+  color: #ffffff;
+  margin: 1rem;
+  font-weight: lighter;
+ }
+
+ .mapBut{
+font-family: 'Rubik Bubbles', cursive;
+margin: 1rem;
+font-weight: lighter;
+ }
+
+ .ticketBut{
+font-family: 'Rubik Bubbles', cursive;
+margin: 1rem;
+font-weight: lighter;
+ }
+
+ .form-box{
+  align-items: center;
+ }
