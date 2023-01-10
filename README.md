@@ -1,9 +1,9 @@
 ### EAR WORM
-Welcome to Ear Worm, the ultimate app for finding the lyrics to your favorite songs! With Lyric Finder, you can easily search for lyrics to any song, and even the album for that song.
+Welcome to Ear Worm, the ultimate app for finding the lyrics to your favorite songs! With Earworm, you can easily search for the lyrics you are looking for in any song, and even the album for that song!
 
 
 
-## How To Use
+## How it Works!!
 To search for song or artist, simply enter the song or artist into the search bar and hit "Search". You will then be taken to a page with the top 50 results for that artist or song. Then you can click the one you're looking for and then find the lyrics! 
 
 
